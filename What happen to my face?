@@ -1,0 +1,12 @@
+mbpk-face-learning/
+│── index.html (menu utama)
+│── video.html (set induction)
+│── game1.html (listen & choose)
+│── game2.html (tap face)
+│── style.css
+│── correct.mp3
+│── wrong.mp3
+│── eye.mp3
+│── nose.mp3
+│── mouth.mp3
+│── video_saya.mp4

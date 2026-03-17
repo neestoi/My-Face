@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>👂 Listen & Choose</h1>
+
+<button onclick="playSound()">🔊 Listen</button>
+
+<div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" width="120" onclick="check('eye')">
+  <img src="https://cdn-icons-png.flaticon.com/512/414/414974.png" width="120" onclick="check('nose')">
+  <img src="https://cdn-icons-png.flaticon.com/512/3063/3063823.png" width="120" onclick="check('mouth')">
+</div>
+
+<h2 id="feedback"></h2>
+<h2 id="stars">⭐ 0</h2>
+
+<a href="game2.html"><button>Next ▶</button></a>
+
+<script>
+let words = ['eye','nose','mouth'];
+let current = '';
+let stars = 0;
+
+function playSound(){
+  current = words[Math.floor(Math.random()*words.length)];
+  new Audio(current + ".mp3").play();
+}
+
+function check(ans){
+  if(ans === current){
+    document.getElementById("feedback").innerHTML = "✅ Good Job!";
+    new Audio("correct.mp3").play();
+    stars++;
+  } else {
+    document.getElementById("feedback").innerHTML = "❌ Try Again";
+    new Audio("wrong.mp3").play();
+  }
+  document.getElementById("stars").innerHTML = "⭐ " + stars;
+}
+</script>
+
+</body>
+</html>

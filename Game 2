@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>👆 Tap the Face: <span id="target"></span></h1>
+
+<img src="https://i.imgur.com/8QfZQ0R.png" width="250">
+
+<br><br>
+
+<button onclick="newRound()">Start</button>
+
+<h2 id="msg"></h2>
+
+<a href="index.html"><button>🏠 Home</button></a>
+
+<script>
+let parts = ['eye','nose','mouth'];
+let current = '';
+
+function speak(text){
+  let msg = new SpeechSynthesisUtterance(text);
+  speechSynthesis.speak(msg);
+}
+
+function newRound(){
+  current = parts[Math.floor(Math.random()*parts.length)];
+  document.getElementById("target").innerText = current;
+  speak("Touch " + current);
+}
+
+function check(ans){
+  if(ans === current){
+    document.getElementById("msg").innerHTML = "✅ Good!";
+  } else {
+    document.getElementById("msg").innerHTML = "❌ Try again";
+  }
+}
+</script>
+
+</body>
+</html>

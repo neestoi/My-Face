@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>MBPK Learning</title>
+</head>
+
+<body>
+
+<h1>🎉 Let's Learn Face Parts</h1>
+
+<div class="card">
+  <a href="video.html"><button>🎶 Start (Sing)</button></a><br><br>
+  <a href="game1.html"><button>👂 Listen & Choose</button></a><br><br>
+  <a href="game2.html"><button>👆 Tap the Face</button></a>
+</div>
+
+</body>
+</html>
